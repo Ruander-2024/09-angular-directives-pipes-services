@@ -7,6 +7,17 @@
       <button>Show the boys</button>
       <button>Show everyone</button>
     </div>
+
+    <!-- <p *ngIf="isVisible">Ez a szöveg csak akkor látható, ha az isVisible értéke igaz.</p> -->
+
+    <!-- <ul>
+      <li *ngFor="let item of items">{{ item }}</li>
+    </ul> -->
+
+    <p [ngStyle]="{color: 'blue'}">Ez a szöveg kék!</p>
+
+    <!-- <p [ngClass]="{'highlight': isHighlighted}">Ez a szöveg kiemelhető</p> -->
+
     <div class="container d-flex flex-wrap justify-content-around">
       <div class="card m-3" style="width: 10rem">
         <img
