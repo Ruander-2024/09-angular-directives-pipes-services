@@ -1,0 +1,35 @@
+.card-border {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.boy-border {
+    box-shadow: 0 4px 8px 0 rgba(55, 35, 235, 0.2);
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(55, 35, 235, 0.2);
+    }
+}
+
+.girl-border {
+    box-shadow: 0 4px 8px 0 rgba(215, 90, 226, 0.2);
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(215, 90, 226, 0.2);
+    }
+}
+
+.bg-boy {
+    background-color: rgb(34, 34, 188);
+}
+
+.bg-girl {
+    background-color: rgb(188, 70, 90);
+}
+
+.bg-everyone {
+    background-color: rgb(7, 125, 125);
+}
