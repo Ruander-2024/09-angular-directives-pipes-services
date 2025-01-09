@@ -58,18 +58,26 @@ export class DirectivesAndPipesComponent {
 
 
   toDisplay: string = '';
+  cardStyle: string = '';
+  btnStyle: string = '';
   characters: Array<PeppaInterface> = [];
   
 
   showBoysOnly(): void {
-  
+    this.characters = this.allCharacters.filter((pig) => pig.sex === 'male');
+    this.cardStyle = 'boy-border';
+    this.btnStyle = 'boy';
   }
 
   showGirlsOnly(): void {
-    
+    this.characters = this.allCharacters.filter((pig) => pig.sex === 'female');
+    this.cardStyle = 'girl-border';
+    this.btnStyle = 'girl';
   }
 
   showEveryone(): void {
-
+    this.characters = this.allCharacters;
+    this.cardStyle = 'card-border';
+    this.btnStyle = 'everyone';
   }
 }
