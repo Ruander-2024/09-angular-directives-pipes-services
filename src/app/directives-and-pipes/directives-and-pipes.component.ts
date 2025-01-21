@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../services-and-observables/services/data.service';
 
 interface PeppaInterface {
   name: string,
@@ -12,6 +13,10 @@ interface PeppaInterface {
   styleUrls: ['./directives-and-pipes.component.scss']
 })
 export class DirectivesAndPipesComponent {
+
+  constructor(private dataService: DataService){
+
+  }
 
   allCharacters: Array<PeppaInterface> = [
     {
@@ -32,7 +37,7 @@ export class DirectivesAndPipesComponent {
     {
       name: 'Georgie Pig',
       sex: 'male',
-      imgUrl: 'https://www.partyrama.co.uk/wp-content/uploads/2014/02/peppa-pig-george-pig-lifesize-cardboard-cutout-60cms-product-image.jpg'
+      imgUrl: 'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg'
     },
     {
       name: 'Suzy Sheep',
@@ -64,7 +69,7 @@ export class DirectivesAndPipesComponent {
   
 
   showBoysOnly(): void {
-    this.characters = this.allCharacters.filter((pig) => pig.sex === 'male');
+    this.characters = this.dataService.allChars.filter((pig) => pig.sex === 'male');
     this.cardStyle = 'boy-border';
     this.btnStyle = 'boy';
   }

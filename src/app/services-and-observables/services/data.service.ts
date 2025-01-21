@@ -87,4 +87,12 @@ export class DataService {
       })
     );
   }
+
+  getPeppaBoys(): Observable<PeppaModel[]> {
+    return this.obsPigs$.pipe(
+      map((pigs: PeppaModel[]) => {
+        return pigs.filter((pig) => pig.sex === 'male');
+      })
+    );
+  }
 }
