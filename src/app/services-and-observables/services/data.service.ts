@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { PeppaModel } from '../interface/peppa.model';
 import { map, Observable, of } from 'rxjs';
 
-
 @Injectable({
   providedIn: 'root',
 })
@@ -60,7 +59,7 @@ export class DataService {
     },
   ];
 
-    // getPeppaGirls(): Array<PeppaModel>{
+  // getPeppaGirls(): Array<PeppaModel>{
   //   return this.allChars.filter((peppa) => peppa.sex === 'female');
   // }
 
@@ -73,15 +72,13 @@ export class DataService {
   // }
   // }
 
-
-  //* Obversable      < -adatfolyam, mely asszinkron módon ad vissza értéket-
+  //* Observable
 
   obsPigs$: Observable<PeppaModel[]> = of(this.allChars);
 
   getPeppaPigs(): Observable<PeppaModel[]>{
     return this.obsPigs$;
   }
-
 
   getPeppaGirls(): Observable<PeppaModel[]> {
     return this.obsPigs$.pipe(
@@ -91,13 +88,11 @@ export class DataService {
     );
   }
 
-
-
-
-
-
-
+  getPeppaBoys(): Observable<PeppaModel[]> {
+    return this.obsPigs$.pipe(
+      map((pigs: PeppaModel[]) => {
+        return pigs.filter((pig) => pig.sex === 'male');
+      })
+    );
+  }
 }
-
-
-
