@@ -32,7 +32,7 @@ export class DirectivesAndPipesComponent {
     {
       name: 'Georgie Pig',
       sex: 'male',
-      imgUrl: 'https://www.partyrama.co.uk/wp-content/uploads/2014/02/peppa-pig-george-pig-lifesize-cardboard-cutout-60cms-product-image.jpg'
+      imgUrl: 'https://peppafanon.fandom.com/wiki/George_Pig'
     },
     {
       name: 'Suzy Sheep',
