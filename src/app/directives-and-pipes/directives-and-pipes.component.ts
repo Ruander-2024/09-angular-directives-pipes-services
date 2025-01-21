@@ -32,7 +32,7 @@ export class DirectivesAndPipesComponent {
     {
       name: 'Georgie Pig',
       sex: 'male',
-      imgUrl: 'https://peppafanon.fandom.com/wiki/George_Pig'
+      imgUrl: 'https://www.bamboobamboo.com/cdn/shop/articles/PP_George_Blog_276bab42-db8e-4754-80ca-d518aefb87d1_1920x.png?v=1667060850'
     },
     {
       name: 'Suzy Sheep',
@@ -47,7 +47,7 @@ export class DirectivesAndPipesComponent {
     {
       name: 'Zoe Zebra',
       sex: 'female',
-      imgUrl: 'https://www.partyrama.co.uk/wp-content/uploads/2014/02/peppa-pig-zoe-zebra-lifesize-cardboard-cutout-79cm-product-image.jpg'
+      imgUrl: 'https://peppapigworld.co.uk/cdn/shop/files/zoe-zebra.png?v=1705660723&width=520'
     },
     {
       name: 'Pedro Pony',

@@ -49,7 +49,7 @@ export class DataService {
     name: 'Zoe Zebra',
     sex: 'female',
     imgUrl:
-      'https://www.partyrama.co.uk/wp-content/uploads/2014/02/peppa-pig-zoe-zebra-lifesize-cardboard-cutout-79cm-product-image.jpg',
+      'https://peppapigworld.co.uk/cdn/shop/files/zoe-zebra.png?v=1705660723&width=520',
   },
   {
     name: 'Pedro Pony',
@@ -85,6 +85,14 @@ getPeppaGirls(): Observable<PeppaModel[]> {
   return this.obsPigs$.pipe(
     map((pigs: PeppaModel[]) => {
       return pigs.filter((pig) => pig.sex === 'female');
+    })
+  );
+}
+
+getPeppaBoys(): Observable<PeppaModel[]> {
+  return this.obsPigs$.pipe(
+    map((pigs: PeppaModel[]) => {
+      return pigs.filter((pig) => pig.sex === 'male');
     })
   );
 }
