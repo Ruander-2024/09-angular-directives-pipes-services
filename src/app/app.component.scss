@@ -1,0 +1,54 @@
+// body {
+//     margin: 0;
+//     overflow: hidden;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh;
+//     background-color: #000;
+//   }
+  
+//   .image-container {
+//     position: relative;
+//     height: 100vh;
+//     overflow: hidden;
+//   }
+  
+//   .image-half {
+//     position: absolute;
+//     width: 50%;
+//     height: 100%;
+//     background-image: url('https://i5.walmartimages.com/asr/40c4baef-703b-4d2a-8d3d-4e251453950d_1.2e9513fbb59279d2f86d8b9c85863e35.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF'); /* Kép URL-je */
+//     background-size: cover;
+//     background-position: center;
+//   }
+  
+//   .image-half.left {
+//     left: 0;
+//     transform-origin: right center;
+//     animation: split 3.5s ease-out forwards;
+//   }
+  
+//   .image-half.right {
+//     right: 0;
+//     transform-origin: left center;
+//     animation: split-right 3.5s ease-out forwards;
+//   }
+  
+//   @keyframes split {
+//     0% {
+//       transform: translateX(0);
+//     }
+//     100% {
+//       transform: translateX(-100%);
+//     }
+//   }
+  
+//   @keyframes split-right {
+//     0% {
+//       transform: translateX(0);
+//     }
+//     100% {
+//       transform: translateX(100%);
+//     }
+//   }
