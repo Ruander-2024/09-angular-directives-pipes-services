@@ -1,7 +1,7 @@
 <p>beta works!</p>
 <div class="container text-center">
-    <button class="btn btn-warning m-2">Get data in beta component</button>
-    <table *ngIf="false" class="table">
+    <button (click)="getPeppaBoys()" class="btn btn-warning m-2">Get data in beta component</button>
+    <table *ngIf="peppaList && peppaList.length > 0" class="table">
         <thead>
           <tr>
               <th scope="col">#</th>
@@ -11,17 +11,17 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-            <th scope="row">0</th>
-            <td>name</td>
-            <td>sex</td>
+            <tr *ngFor="let peppa of peppaList; index as i">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ peppa.name }}</td>
+            <td>{{ peppa.sex }}</td>
             <td>
                 <div style="height: 100px" class="container">
-                    <img src="" alt="" class="img-fluid mh-100">
+                    <img [src]="peppa.imgUrl" alt="" class="img-fluid mh-100">
                 </div>
             </td>
           </tr>
         </tbody>
     </table>
-    <button class="btn btn-danger m-2">Say hello to Gamma!</button>
+    <button (click)="sendHelloToService()" class="btn btn-danger m-2">Say hello to Gamma!</button>
 </div>
