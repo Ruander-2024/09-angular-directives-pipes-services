@@ -31,7 +31,7 @@ export class DataService {
     name: 'Georgie Pig',
     sex: 'male',
     imgUrl:
-      'https://www.pinclipart.com/pindetail/ibmmTbT_george-peppa-pig-clipart/',
+      'https://www.bamboobamboo.com/cdn/shop/articles/PP_George_Blog_276bab42-db8e-4754-80ca-d518aefb87d1_1920x.png?v=1667060850'
   },
   {
     name: 'Suzy Sheep',
@@ -43,7 +43,7 @@ export class DataService {
     name: 'Danny Dog',
     sex: 'male',
     imgUrl:
-      'https://www.partyrama.co.uk/wp-content/uploads/2014/02/peppa-pig-danny-dog-lifesize-cardboard-cutout-78cms-product-image.jpg',
+      'https://static.wikia.nocookie.net/peppapig/images/1/1f/DannyDog.png/revision/latest?cb=20240414055420'
   },
   {
     name: 'Zoe Zebra',
