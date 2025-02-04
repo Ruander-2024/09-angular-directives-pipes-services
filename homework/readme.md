@@ -14,6 +14,8 @@ User mezői:
 models mappa/user.model.ts - interface
 models mappa/users.ts - users tömb exportálva, ez beimportálható majd a service-ban
 
+
+
 Használd a components, services, models mappa struktúrát.
 Hozz létre 1 komponenst listing-app néven.
 Hozz létre 1 service-t data néven

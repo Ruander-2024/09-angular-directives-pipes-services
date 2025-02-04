@@ -1,0 +1,40 @@
+<div class="container mt-3">
+    <h2>Listing App</h2>
+    <!-- Szűrő gombok -->
+    <button class="btn btn-secondary me-2" (click)="getAllUsers()">Összes</button>
+    <button class="btn btn-info me-2" (click)="getOddUsers()">Páratlan ID</button>
+    <button class="btn btn-warning" (click)="getEvenUsers()">Páros ID</button>
+  
+    <table class="table table-bordered mt-3">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Salary</th>
+          <th>Expiration Date</th>
+          <th>Műveletek</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Használjuk az ng-container-t, hogy elkerüljük a két strukturális direktíva egy elemre történő használatát -->
+        <ng-container *ngFor="let user of users; let i = index">
+          <tr [ngClass]="{'table-primary': i % 2 === 1}" *ngIf="!user.deletedUser">
+            <td>{{ user.id }}</td>
+            <!-- A pipes-okat majd később alkalmazzuk a 3. feladatban -->
+            <td>{{ user.first_name | firstNameFormat }}</td>
+            <td>{{ user.last_name | lastNameFormat }}</td>
+            <td>{{ user.email | lowercase }}</td>
+            <td>{{ user.salary | currency:'USD':true:'1.0-0' }}</td>
+            <!-- Az expiration_date esetében mivel az érték unix timestamp (ms) string, egyszerű trükk: szorozzuk 1-gyel, hogy számmá konvertálódjon -->
+            <td>{{ (user.expiration_date * 1) | date:'yyyy MMMM dd' }}</td>
+            <td>
+              <button class="btn btn-danger btn-sm" (click)="deleteUser(user)">Delete</button>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+  
